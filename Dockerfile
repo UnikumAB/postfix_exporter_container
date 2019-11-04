@@ -7,7 +7,7 @@ RUN GOOS=linux GOARCH=amd64 go get -ldflags="-w -s" github.com/kumina/postfix_ex
 
 FROM golang
 COPY --from=build /go/bin/postfix_exporter /app/postfix_exporter
-EXPOSE 9166
+EXPOSE 9154
 WORKDIR /app
 
 ENTRYPOINT ["/app/postfix_exporter"]
