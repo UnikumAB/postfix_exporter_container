@@ -2,7 +2,7 @@ FROM golang AS build
 
 RUN apt-get update && \
     apt-get install -y g++ libsystemd-dev git
-RUN GOOS=linux GOARCH=amd64 go get -ldflags="-w -s" github.com/kumina/postfix_exporter
+RUN GOOS=linux GOARCH=amd64 go get -ldflags="-w -s" github.com/UnikumAB/postfix_exporter-1
 
 
 FROM golang
